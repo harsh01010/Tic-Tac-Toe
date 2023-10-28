@@ -102,9 +102,11 @@ boxes.forEach(function (box) {
 });
 
 const reset = () => {
+  let clr = document.querySelector('.box').style.color;
   let boxText = document.querySelectorAll(".boxText");
   boxText.forEach((e) => {
     e.innerText = "";
+    e.style.color = clr;
   });
   turn = changeTurn();
   document.querySelector(".info").innerText = "Turn for " + turn;
