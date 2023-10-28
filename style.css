@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 20%;
+}
+.disp{
+    display: none;
+}
+body{
+    font-family: cursive !important;
+}
+.dark{background-color: #232222;
+    color: rgb(123, 20, 6);}
+nav{
+    background-color: rgb(120, 229, 237);
+    color: black;
+    height: 75px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+    font-family: cursive;
+
+    justify-content: space-between;
+}
+.nav-bg-change{
+    background-color: rgb(203, 121, 121);
+
+}
+nav ul{
+    list-style-type:none;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+
+}
+.container{
+   display: grid;
+   grid-template: repeat(3,10vw)/repeat(3,10vw);
+   font-family: cursive;
+   position: relative;
+   margin-left: 20px;
+}
+.box{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    cursor: pointer;
+}
+.box-borderColor-change{
+    border-color: rgb(197, 168, 168);
+}
+.box:hover{
+    background-color: rgb(120, 229, 237);
+}
+.dark .box:hover,
+.dark-mode-hover:hover {
+    background-color: rgb(255, 162, 162);
+}
+.info{
+    font-size: 22px;
+}
+.gameInfo{
+    padding: 0px 44px;
+}
+.gameInfo>h1{
+    font-size: 2.5rem;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.changeTheme{
+    margin-right: 30px;
+    cursor: pointer;
+}
+#reset{
+    margin: 10px;
+    padding: 11px;
+    border-radius: 50%;
+}
+.reset-bgc{ background-color: rgb(120, 229, 237);
+}
+.reset-bgc-change{ background-color: rgb(203, 121, 121);
+}
+@media  (max-width:780px){
+    .gameContainer{
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2vh;        
+    }
+    .gameInfo>h1{
+        font-size: 1.75rem;
+    }
+    .container{
+    grid-template: repeat(3,20vw)/repeat(3,20vw);
+    margin: auto;
+    }
+    .gameInfo{
+        display: flex; 
+    }
+    img{
+        height: 180px;
+    }
+}
