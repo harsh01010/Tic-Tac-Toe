@@ -8,7 +8,6 @@ const move = [
 ];
 const lost = ["./assets/5.mp3"];
 const won = ["./assets/4.mp3"];
-const tie = ["./assets/9.mp3"];
 
 function generate_ramdom(min, max) {
   // max and min both are included.
@@ -21,10 +20,6 @@ function turnAudio() {
 }
 function winAudio() {
   audio = new Audio(won);
-  audio.play();
-}
-function drawAudio() {
-  audio = new Audio(tie);
   audio.play();
 }
 
@@ -78,7 +73,6 @@ const checkWinner = () => {
     });
     if (draw) {
       changetext.innerText = `DRAW!!`;
-      drawAudio();
       document.querySelector(".info").innerText = `Click Below To Reset.`;
     }
   }
